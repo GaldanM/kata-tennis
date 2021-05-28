@@ -1,0 +1,13 @@
+{
+	"env": {
+		"es2021": true
+	},
+	"extends": [
+		"@galdanm/eslint-config-jest",
+		"@galdanm/eslint-config-typescript"
+	],
+	"rules": {
+		"@typescript-eslint/sort-type-union-intersection-members": "off",
+		"jest/prefer-expect-assertions": "off"
+	}
+}
