@@ -54,4 +54,15 @@ describe("tennis game scoring system", () => {
 
     expect(gameScore).toStrictEqual("Advantage Forty");
   });
+  it("player two should win at 4 points and 2 points more than opponent", () => {
+    const game = new TennisGame();
+
+    game.playerTwoScored();
+    game.playerTwoScored();
+    game.playerTwoScored();
+    game.playerTwoScored();
+    const gameScore = game.score();
+
+    expect(gameScore).toStrictEqual("Player Two won this game");
+  });
 });

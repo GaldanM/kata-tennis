@@ -23,6 +23,9 @@ class TennisGame {
     if (this.playerOneScore >= 4 && this.playerTwoScore <= this.playerOneScore - 2) {
       return "Player One won this game";
     }
+    if (this.playerTwoScore >= 4 && this.playerOneScore <= this.playerTwoScore - 2) {
+      return "Player Two won this game";
+    }
 
     if (this.playerOneScore >= 3 && this.playerTwoScore === this.playerOneScore) {
       return "Deuce";
