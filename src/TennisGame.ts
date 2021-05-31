@@ -34,6 +34,9 @@ class TennisGame {
     if (this.playerOneScore >= 3 && this.playerOneScore - this.playerTwoScore === 1) {
       return "Advantage Forty";
     }
+    if (this.playerTwoScore >= 3 && this.playerTwoScore - this.playerOneScore === 1) {
+      return "Forty Advantage";
+    }
 
     return `${scoreToLabel(this.playerOneScore)} ${scoreToLabel(this.playerTwoScore)}` as GameScore;
   }

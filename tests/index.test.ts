@@ -40,7 +40,7 @@ describe("tennis game scoring system", () => {
 
     expect(gameScore).toStrictEqual("Deuce");
   });
-  it("players should have an advantage when having at least 3 points and one point ahead of the opponent", () => {
+  it("player one should have an advantage when having at least 3 points and one point ahead of the opponent", () => {
     const game = new TennisGame();
 
     game.playerOneScored();
@@ -64,5 +64,19 @@ describe("tennis game scoring system", () => {
     const gameScore = game.score();
 
     expect(gameScore).toStrictEqual("Player Two won this game");
+  });
+  it("player two should have an advantage when having at least 3 points and one point ahead of the opponent", () => {
+    const game = new TennisGame();
+
+    game.playerTwoScored();
+    game.playerTwoScored();
+    game.playerTwoScored();
+    game.playerOneScored();
+    game.playerOneScored();
+    game.playerOneScored();
+    game.playerTwoScored();
+    const gameScore = game.score();
+
+    expect(gameScore).toStrictEqual("Forty Advantage");
   });
 });
