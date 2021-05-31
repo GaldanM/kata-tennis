@@ -12,4 +12,11 @@ describe("tennis game scoring system", () => {
 
     expect(gameScore).toStrictEqual("Player One won this game");
   });
+  it("players should have a score of love at 0 points", () => {
+    const game = new TennisGame();
+
+    const gameScore = game.score();
+
+    expect(gameScore).toStrictEqual("Love Love");
+  });
 });

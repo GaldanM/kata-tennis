@@ -2,5 +2,7 @@ _________________________________________________________
 | TennisGame                                            |
 _________________________________________________________
 | displays the score               |                    |
+| stores player one's score        |                    |
+| stores player two's score        |                    |
 | increments player one's score    |                    |
 _________________________________________________________
