@@ -19,4 +19,12 @@ describe("tennis game scoring system", () => {
 
     expect(gameScore).toStrictEqual("Love Love");
   });
+  it("players should have a score of fifteen at 1 points", () => {
+    const game = new TennisGame();
+
+    game.playerOneScored();
+    const gameScore = game.score();
+
+    expect(gameScore).toStrictEqual("Fifteen Love");
+  });
 });
